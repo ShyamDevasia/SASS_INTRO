@@ -1,0 +1,34 @@
+/* 
+
+Houses First Variation of Variables for Sample
+
+*/
+
+/* corporate color palette */
+$primary-dark: #06888A;
+$primary-light: #FFEED5;
+$primary-mid: #DC664A;
+$secondary-dark: #5A3928;
+$secondary-light: #FDC149;
+
+/* functional variables */
+$color1: $primary-dark;
+$color2: $primary-light;
+$fontcolor1: $primary-mid;
+$fontcolor2: $secondary-dark;
+$border-radius: 7px; 
+
+$headline-font: 'Varela Round', Helvetica, Arial, sans-serif;
+$body-font: 'Palatino Linotype', Baskerville, serif;
+
+body {
+  text-align: center;
+  > #container {
+    text-align:left;
+    margin:0 auto;
+    width:500px;
+  }
+}
+
+
+
