@@ -1,8 +1,22 @@
 
+////
+/// This is a demo project on gulp-sass.
+/// @author Shyam Devasia
+////
+
+///Notes:
+/// Sass stands for Syntactically Awesome Stylesheets Sass, and was created by Hampton Catlin. It's a way to simplify your CSS workflow,
+/// making development and maintenance tasks easier. A sass file has an extension of .scss
 
 
+/// main sass file.
 
-@import "helpers/basics"; //This command brings in file _basics.scss to consume these variables and output CSS
+/// We can plugin variables into any property in scss file, please see helper/_basics.scss file for usage.
+/// $primary-dark is defined inside this file and imported to this main file using @import command.
+/// for example : color:$primary-dark  --> $primary-dark is defined inside _basics.scss
+@import "helpers/basics"; 
+
+/// Mixins give some amount of programability to your scss file. Refer helper/_mixins.scss for details
 @import "helpers/mixins";
 
 header {
@@ -10,8 +24,35 @@ header {
     font-size:26px; margin-bottom:26px;
   }
 }
+
+/// Nesting selectors
+///
+///        <div class="container">
+///          <ul>
+///            <li>List Item 1</li>
+///            <li>
+///              <button>Here is a button</button>
+///            </li>
+///          </ul>
+
+/// The normal way of css should be like : 
+/// .container{
+///  margin-bottom:25px; 
+///  border: 3px;
+/// }
+///
+///.container ul {
+///  padding-top:14px;
+///}
+
+///.container li {
+///  color:$primary-dark;
+///  margin-bottom:12px;
+///}
+
+///the same can be nested like below in sass, live example from SASS_INTRO/index.html
 div[role="main"] { 
-  border:3px solid $color2;
+  border:3px solid $primary-dark;
   padding:$border-radius;
   margin-bottom:25px; 
   
@@ -19,7 +60,7 @@ div[role="main"] {
     padding-top:14px;
   }
   li {
-    color:$fontcolor1;
+    color:$primary-dark;
     margin-bottom:12px;
   }
   button {

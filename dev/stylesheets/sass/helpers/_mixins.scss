@@ -1,4 +1,9 @@
-
+/// mixin example.
+/// First add @mixin directive followed by the name you want to assign to the mixin and set of curly braces.
+/// for example @mixin flex {...}
+/// Best practice: add this to the top of main scss file, import mixins just after the variables defenition.
+///	To use below mixin use '@include', u can see the usage in main.scss file
+/// mixin can also take parameters to run.
 @mixin btncolor($clr){
 	background-color: $clr;
 }
